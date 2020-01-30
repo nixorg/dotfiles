@@ -1,0 +1,55 @@
+"general
+set clipboard=unnamed
+set hlsearch
+set selection       " what type of selection to use
+set showmode        " message on status line to show current mode
+let mapleader = " " 
+set scrolloff=10
+set autoindent
+set cindent
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set shiftround
+set expandtab
+set incsearch
+set ignorecase
+set nu rnu
+set surround
+set commentary
+
+map <leader>' :source ~/.ideavimrc<CR>:echo "Reloaded .ideavimrc"<CR>
+nnoremap <leader>a :action GotoAction<cr>
+nnoremap <leader>; :action FileStructurePopup<cr>
+nnoremap <leader>f :action RecentFiles<CR>
+nnoremap <leader>` :action ChooseRunConfiguration<CR>
+
+nnoremap <leader>s :split<CR>
+nnoremap <leader>v :vs<CR>
+nnoremap , :action NextSplitter<CR>
+
+"git
+nnoremap <leader>gb :action Git.Branches<CR>
+nnoremap <leader>ga :action Annotate<CR>
+nnoremap <leader>gf :action Git.Fetch<CR>
+nnoremap <leader>gp :action Vcs.Push<CR>
+nnoremap <leader>gg :action Git.Pull<CR>
+nnoremap <leader>gc :action ChangesView.Commit<CR>
+nnoremap <leader>gd :action Git.CompareWithBranch<CR>
+
+nnoremap <leader>gl :action Vcs.Show.Log<CR>
+nnoremap <leader>gm :action Vcs.QuickListPopupAction<CR>
+nnoremap <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
+
+
+nnoremap <leader>; :action FileStructurePopup<CR>
+
+" refactoring
+nnoremap <leader>rr :action RenameElement<CR>
+nnoremap <leader>rc :action IntrodubceConstant<CR>
+nnoremap <leader>rv :action IntroduceVariable<CR>
+nnoremap <leader>rf :action IntroduceField<CR>
+nnoremap <leader>rp :action IntroduceParameter<CR>
+nnoremap <leader>rm :action ExtractMethod<CR>
+nnoremap <leader>rt :action Refactorings.QuickListPopupAction<CR>
+nnoremap <leader>ri :action Inline<CR>
