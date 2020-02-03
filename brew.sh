@@ -19,42 +19,32 @@ fi
 brew update
 
 # Upgrade any already-installed formulae.
-brew upgrade --all
+brew upgrade
 
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
 sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
-# Install some other useful utilities like `sponge`.
-brew install moreutils
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
-brew install findutils
-# Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
-# Install Bash 4.
-brew install bash
-brew tap homebrew/versions
-brew install bash-completion2
+brew install zsh
 
 # Install Python
-brew install python
 brew install python3
 
 # Install other useful binaries.
 brew install ack
 brew install skhd
 brew install neovim
-brew install autojump
 brew install autoenv
 brew install fasd
 brew install fzf
 brew install gradle
 brew install the_silver_searcher
 brew install git
-brew install imagemagick --with-webp
 brew install tree
 brew install pandoc
+brew install bat
+brew install fd
 
 # Core casks
 brew cask install alfred
@@ -67,7 +57,7 @@ brew cask install google-chrome
 brew cask install skype
 brew cask install dropbox
 brew cask install ccleaner
-brew cask install android-platform-tols
+brew cask install android-platform-tools
 brew cask install deluge
 
 
