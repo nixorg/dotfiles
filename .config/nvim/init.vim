@@ -9,10 +9,13 @@ set ignorecase
 set smartcase
 set incsearch
 set shell=zsh
+set noshowmode
+set cursorline
 
 " Plugins
 call plug#begin()
-Plug 'cocopon/iceberg.vim'
+Plug 'lifepillar/vim-solarized8'
+Plug 'itchyny/lightline.vim'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -27,9 +30,13 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-set background=dark
-colorscheme iceberg
+" Theme setup
 set termguicolors
+set background=dark
+colorscheme solarized8
+set fillchars+=vert:\│
+hi VertSplit guibg=#002b36 guifg=#002b36
+let g:lightline = { 'colorscheme': 'solarized' }
 
 " Keys maping
 let mapleader=" "
@@ -54,27 +61,6 @@ nnoremap <Leader>' :close<CR>
 
 nnoremap <Leader>m :NERDTreeToggle<CR>
 
-" sync open file with NERDTree
-" " Check if NERDTree is open or active
-function! IsNERDTreeOpen()        
-  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-endfunction
-
-" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
-" file, and we're not in vimdiff
-function! SyncTree()
-  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-    NERDTreeFind
-    wincmd p
-  endif
-endfunction
-
-" Highlight currently open buffer in NERDTree
-autocmd BufEnter * call SyncTree()
-
-" ctrlp
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -94,6 +80,7 @@ let g:coc_global_extensions = [
   \ 'coc-eslint', 
   \ 'coc-prettier', 
   \ 'coc-json', 
+  \ 'coc-vetur', 
   \ ]
 
 " Remap keys for gotos

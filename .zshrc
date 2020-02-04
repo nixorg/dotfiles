@@ -1,7 +1,10 @@
 # ZSH
 export ZSH="/Users/nixorg/.oh-my-zsh"
 ZSH_CUSTOM=$HOME/.zsh
-ZSH_THEME="robbyrussell"
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
 
 plugins=(
     git
@@ -21,7 +24,7 @@ source $ZSH/oh-my-zsh.sh
 # export
 export EDITOR="nvim"
 export LANG=en_US.UTF-8
-export BAT_THEME="iceberg"
+export BAT_THEME="solarized"
 
 if [ -z "$HISTFILE" ]; then
     HISTFILE=$HOME/.zsh_history
@@ -58,9 +61,10 @@ bindkey '[F' end-of-line
 
 # aliases
 alias vim='nvim'
-alias v='nvim'
-alias l='colorls -1 --sd'
-alias ll='colorls -a --sd'
+alias v='f -e nvim'
+alias l='clear && colorls -1 --sd'
+alias c='clear'
+alias ll='clear && colorls -a --sd'
 alias ld='colorls -1 -d'
 alias lf='colorls -1 -f --sd'
 
@@ -94,3 +98,4 @@ function m() {
 
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
