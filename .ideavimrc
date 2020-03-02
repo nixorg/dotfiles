@@ -17,11 +17,26 @@ set ignorecase
 set nu rnu
 set surround
 set commentary
+set argtextobj
+set textobj-entire
+
+nmap go :action OverrideMethods<CR>
+
+" commands
+
+" command! O action HideActiveWindow
+
+" window
+nnoremap <leader>0 :action HideActiveWindow<CR>
+
+" navigation
+nmap gs :action GotoSuperMethod<CR>
 
 map <leader>' :source ~/.ideavimrc<CR>:echo "Reloaded .ideavimrc"<CR>
 nnoremap <leader>a :action GotoAction<cr>
 nnoremap <leader>; :action FileStructurePopup<cr>
 nnoremap <leader>f :action RecentFiles<CR>
+" nnoremap <leader>o :action OverrideMethods<CR>
 nnoremap <leader>` :action ChooseRunConfiguration<CR>
 
 nnoremap <leader>s :split<CR>
@@ -53,3 +68,9 @@ nnoremap <leader>rp :action IntroduceParameter<CR>
 nnoremap <leader>rm :action ExtractMethod<CR>
 nnoremap <leader>rt :action Refactorings.QuickListPopupAction<CR>
 nnoremap <leader>ri :action Inline<CR>
+
+" debug
+nnoremap <leader>db :action ToggleLineBreakpoint<CR>
+nnoremap <leader>dm :action XDebugger.MuteBreakpoints<CR>
+nnoremap <leader>de :action EvaluateExpression<CR>
+nnoremap <leader>dd :action QuickEvaluateExpression<CR>

@@ -99,3 +99,5 @@ function m() {
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+
+source /Users/nixorg/Library/Preferences/org.dystroy.broot/launcher/bash/br

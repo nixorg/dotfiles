@@ -12,6 +12,8 @@ set shell=zsh
 set noshowmode
 set cursorline
 
+command! Rl vs
+
 " Plugins
 call plug#begin()
 Plug 'lifepillar/vim-solarized8'
@@ -23,6 +25,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -31,8 +34,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Theme setup
-set termguicolors
+" This is only necessary if you use "set termguicolors".
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+" fixes glitch? in colors when using vim with tmux
 set background=dark
+set t_Co=256
+set termguicolors
 colorscheme solarized8
 set fillchars+=vert:\│
 hi VertSplit guibg=#002b36 guifg=#002b36
