@@ -1,0 +1,9 @@
+[submodule ".zsh/plugins/autoenv"]
+	path = .zsh/plugins/autoenv
+	url = https://github.com/Tarrasch/zsh-autoenv
+[submodule ".zsh/plugins/zsh-autopair"]
+	path = .zsh/plugins/zsh-autopair
+	url = https://github.com/hlissner/zsh-autopair
+[submodule ".zsh/plugins/zsh-autosuggestions"]
+	path = .zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
