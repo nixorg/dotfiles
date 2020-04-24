@@ -25,6 +25,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR="nvim"
 export LANG=en_US.UTF-8
 export BAT_THEME="solarized"
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 if [ -z "$HISTFILE" ]; then
     HISTFILE=$HOME/.zsh_history
@@ -86,6 +87,15 @@ alias e="open -a /Applications/Emacs.app"
 
 # git aliases for dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
+# vagrant alias
+alias vup='vagrant up'
+alias vs='vagrant suspend'
+alias vd='vagrant destroy'
+alias vssh='vagrant ssh'
+
+alias release='mvn -DautoVersionSubmodules=true release:clean release:prepare'
+
 
 # functions
 function m() {
