@@ -11,6 +11,9 @@ set incsearch
 set shell=zsh
 set noshowmode
 set cursorline
+set inccommand=nosplit
+set diffopt+=iwhite
+set diffexpr=""
 
 command! Rl vs
 

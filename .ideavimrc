@@ -74,3 +74,6 @@ nnoremap <leader>db :action ToggleLineBreakpoint<CR>
 nnoremap <leader>dm :action XDebugger.MuteBreakpoints<CR>
 nnoremap <leader>de :action EvaluateExpression<CR>
 nnoremap <leader>dd :action QuickEvaluateExpression<CR>
+
+" info
+nnoremap <leader>q :action QuickJavaDoc<CR>
