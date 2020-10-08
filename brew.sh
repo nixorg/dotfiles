@@ -97,3 +97,4 @@ brew cleanup
 mkdir ~/dotfiles
 git clone --bare https://github.com/KreiDer/dotfiles $HOME/dotfiles
 git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout -f
+git --git-dir=$HOME/dotfiles/ --work-tree=$HOME submodule update --init --recursive
