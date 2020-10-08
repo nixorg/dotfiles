@@ -59,7 +59,6 @@ brew cask install iterm2
 brew cask install alfred
 brew cask install adoptopenjdk/openjdk/adoptopenjdk8
 brew cask install adoptopenjdk/openjdk/adoptopenjdk11
-brew cask install font-fira-mono
 brew cask install karabiner-elements
 brew cask install maccy
 brew cask install simplenote
@@ -67,6 +66,7 @@ brew cask install typora
 brew cask install notion
 brew cask install google-chrome
 brew cask install marta
+brew cask install microsoft-office
 
 # chat
 brew cask install skype
@@ -82,6 +82,8 @@ brew cask install sublime-text
 brew cask install visual-studio-code
 brew cask install intellij-idea
 brew cask install docker
+brew cask install virtualbox
+brew cask install virtualbox-extension-pack
 brew cask install android-platform-tools
 
 #brew cask install dropbox
@@ -94,5 +96,4 @@ brew cleanup
 # setup dotfiles
 mkdir ~/dotfiles
 git clone --bare https://github.com/KreiDer/dotfiles $HOME/dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-config checkout -f
+git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout -f
