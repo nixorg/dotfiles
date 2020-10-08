@@ -118,3 +118,4 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
+export PATH="/usr/local/opt/postgresql@11/bin:$PATH"

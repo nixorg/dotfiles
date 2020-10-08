@@ -24,7 +24,6 @@ brew upgrade
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
-sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
 brew install zsh
 
@@ -39,6 +38,7 @@ brew install autoenv
 brew install fasd
 brew install fzf
 brew install gradle
+brew install maven
 brew install the_silver_searcher
 brew install git
 brew install tree
@@ -48,31 +48,45 @@ brew install fd
 brew install npm
 brew install autojump
 brew install tmux
+brew install jq
+brew install httpie
+brew install graphviz
+brew install postgresql@11
+brew install vifm 
 
-# Core casks
-brew cask install alfred
+# core
 brew cask install iterm2
-brew cask install java
+brew cask install alfred
 brew cask install adoptopenjdk/openjdk/adoptopenjdk8
+brew cask install adoptopenjdk/openjdk/adoptopenjdk11
+brew cask install font-fira-mono
+brew cask install karabiner-elements
+brew cask install maccy
+brew cask install simplenote
+brew cask install typora
+brew cask install notion
+brew cask install google-chrome
+brew cask install marta
 
+# chat
+brew cask install skype
+brew cask install telegram
+brew cask install viber
+
+# dev
+brew cask install pgadmin4
+brew cask install postman
+brew cask install slack
+brew cask install vagrant
 brew cask install sublime-text
 brew cask install visual-studio-code
-brew cask install google-chrome
-brew cask install skype
-brew cask install marta
 brew cask install intellij-idea
+brew cask install docker
+brew cask install android-platform-tools
+
 #brew cask install dropbox
 #brew cask install ccleaner
-brew cask install android-platform-tools
 # brew cask install deluge
-
-
-# Install Docker, which requires virtualbox
-#brew install docker
-#brew install boot2docker
-
-# Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
 
 # Remove outdated versions from the cellar.
 brew cleanup
