@@ -54,6 +54,10 @@ brew install graphviz
 brew install postgresql@11
 brew install vifm 
 
+# font
+brew tap homebrew/cask-fonts
+brew cask install font-fira-mono-nerd-font
+
 # core
 brew cask install iterm2
 brew cask install alfred
@@ -88,8 +92,10 @@ brew cask install android-platform-tools
 
 #brew cask install dropbox
 #brew cask install ccleaner
-# brew cask install deluge
+#brew cask install deluge
 
+# services
+brew services start skhd
 # Remove outdated versions from the cellar.
 brew cleanup
 
@@ -98,3 +104,6 @@ mkdir ~/dotfiles
 git clone --bare https://github.com/KreiDer/dotfiles $HOME/dotfiles
 git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout -f
 git --git-dir=$HOME/dotfiles/ --work-tree=$HOME submodule update --init --recursive
+
+# setup colorls
+gem install colorls
