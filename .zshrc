@@ -119,3 +119,10 @@ if type brew &>/dev/null; then
   compinit
 fi
 export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
+
+function dot-synch() {
+    DATE=$(date +"%d.%m.%Y %H:%M")
+    git --git-dir=$HOME/dotfiles/ --work-tree=$HOME add -u 
+    git --git-dir=$HOME/dotfiles/ --work-tree=$HOME commit -m "$DATE synch"
+    pit --git-dir=$HOME/dotfiles/ --work-tree=$HOME push -u origin master
+}
