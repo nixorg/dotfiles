@@ -90,3 +90,9 @@ brew cask install android-platform-tools
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# setup dotfiles
+mkdir ~/dotfiles
+git clone --bare https://github.com/KreiDer/dotfiles $HOME/dotfiles
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+config checkout -f
