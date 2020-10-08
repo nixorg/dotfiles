@@ -124,5 +124,5 @@ function dot-synch() {
     DATE=$(date +"%d.%m.%Y %H:%M")
     git --git-dir=$HOME/dotfiles/ --work-tree=$HOME add -u 
     git --git-dir=$HOME/dotfiles/ --work-tree=$HOME commit -m "$DATE synch"
-    pit --git-dir=$HOME/dotfiles/ --work-tree=$HOME push -u origin master
+    git --git-dir=$HOME/dotfiles/ --work-tree=$HOME push -u origin master
 }
