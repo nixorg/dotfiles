@@ -29,7 +29,9 @@ Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'christoomey/vim-tmux-navigator'
-
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+Plug 'vimwiki/vimwiki'
+Plug 'sbdchd/neoformat'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
@@ -111,4 +113,7 @@ command! -bang -nargs=? -complete=dir AgWithPreview
     \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 autocmd TermOpen * setlocal nonumber norelativenumber
+
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
 

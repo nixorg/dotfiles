@@ -60,14 +60,14 @@ nnoremap <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
 nnoremap <leader>; :action FileStructurePopup<CR>
 
 " refactoring
-nnoremap <leader>rr :action RenameElement<CR>
-nnoremap <leader>rc :action IntrodubceConstant<CR>
-nnoremap <leader>rv :action IntroduceVariable<CR>
-nnoremap <leader>rf :action IntroduceField<CR>
-nnoremap <leader>rp :action IntroduceParameter<CR>
-nnoremap <leader>rm :action ExtractMethod<CR>
-nnoremap <leader>rt :action Refactorings.QuickListPopupAction<CR>
-nnoremap <leader>ri :action Inline<CR>
+map <leader>rr :action RenameElement<CR>
+map <leader>rc :action IntroduceConstant<CR>
+map <leader>rv :action IntroduceVariable<CR>
+map <leader>rf :action IntroduceField<CR>
+map <leader>rp :action IntroduceParameter<CR>
+map <leader>rm :action ExtractMethod<CR>
+map <leader>rt :action Refactorings.QuickListPopupAction<CR>
+map <leader>ri :action Inline<CR>
 
 " debug
 nnoremap <leader>db :action ToggleLineBreakpoint<CR>

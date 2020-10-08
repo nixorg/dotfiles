@@ -33,7 +33,7 @@ brew install python3
 
 # Install other useful binaries.
 brew install ack
-brew install skhd
+brew install koekeishiya/formulae/skhd
 brew install neovim
 brew install autoenv
 brew install fasd
@@ -45,25 +45,31 @@ brew install tree
 brew install pandoc
 brew install bat
 brew install fd
+brew install npm
+brew install autojump
+brew install tmux
 
 # Core casks
 brew cask install alfred
 brew cask install iterm2
 brew cask install java
+brew cask install adoptopenjdk/openjdk/adoptopenjdk8
 
 brew cask install sublime-text
 brew cask install visual-studio-code
 brew cask install google-chrome
 brew cask install skype
-brew cask install dropbox
-brew cask install ccleaner
+brew cask install marta
+brew cask install intellij-idea
+#brew cask install dropbox
+#brew cask install ccleaner
 brew cask install android-platform-tools
-brew cask install deluge
+# brew cask install deluge
 
 
 # Install Docker, which requires virtualbox
-brew install docker
-brew install boot2docker
+#brew install docker
+#brew install boot2docker
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package

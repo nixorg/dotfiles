@@ -94,6 +94,9 @@ alias vs='vagrant suspend'
 alias vd='vagrant destroy'
 alias vssh='vagrant ssh'
 
+# java
+alias j8='export JAVA_HOME=`/usr/libexec/java_home -v 1.8` ; java -version'
+alias j11='export JAVA_HOME=`/usr/libexec/java_home -v 11` ; java -version'
 alias release='mvn -DautoVersionSubmodules=true release:clean release:prepare'
 
 
