@@ -71,6 +71,7 @@ brew cask install notion
 brew cask install google-chrome
 brew cask install marta
 brew cask install microsoft-office
+brew cask install microsoft-teams
 
 # chat
 brew cask install skype
@@ -85,6 +86,7 @@ brew cask install vagrant
 brew cask install sublime-text
 brew cask install visual-studio-code
 brew cask install intellij-idea
+brew cask install emacs
 brew cask install docker
 brew cask install virtualbox
 brew cask install virtualbox-extension-pack
