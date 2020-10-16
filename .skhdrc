@@ -1,3 +1,4 @@
+shift + cmd - 7: open -a /Applications/Safari.app
 shift + cmd - 8: open -a /Applications/Marta.app
 shift + cmd - 9: open -a /Applications/IntelliJ\ IDEA.app
 shift + cmd - 0: open -a /Applications/Emacs.app && osascript -e 'tell application "Emacs" to activate'
