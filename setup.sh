@@ -68,6 +68,7 @@ brew cask install maccy
 brew cask install simplenote
 brew cask install typora
 brew cask install notion
+brew cask install fsnotes
 brew cask install google-chrome
 brew cask install marta
 brew cask install microsoft-office
