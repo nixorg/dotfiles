@@ -8,6 +8,7 @@ prompt spaceship
 
 plugins=(
     git
+    forgit
     gitfast
     autojump
     fzf
@@ -25,7 +26,8 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR="nvim"
 export LANG=en_US.UTF-8
 export BAT_THEME="solarized"
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+unset JAVA_HOME
+export JAVA_HOME=`/usr/libexec/java_home -v 11`
 
 if [ -z "$HISTFILE" ]; then
     HISTFILE=$HOME/.zsh_history
@@ -95,8 +97,8 @@ alias vd='vagrant destroy'
 alias vssh='vagrant ssh'
 
 # java
-alias j8='export JAVA_HOME=`/usr/libexec/java_home -v 1.8` ; java -version'
-alias j11='export JAVA_HOME=`/usr/libexec/java_home -v 11` ; java -version'
+alias j8='unset JAVA_HOME; export JAVA_HOME=`/usr/libexec/java_home -v 1.8` ; java -version'
+alias j11='unset JAVA_HOME; export JAVA_HOME=`/usr/libexec/java_home -v 11` ; java -version'
 alias release='mvn -DautoVersionSubmodules=true release:clean release:prepare'
 
 
@@ -111,6 +113,23 @@ function m() {
 
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+_fzf_complete_git() {
+    ARGS="$@"
+    local branches
+    branches=$(git branch -vv --all)
+    if [[ $ARGS == 'git checkout'* ]]; then
+        _fzf_complete --reverse --multi -- "$@" < <(
+            echo $branches
+        )
+    else
+        eval "zle ${fzf_default_completion:-expand-or-complete}"
+    fi
+}
+
+_fzf_complete_git_post() {
+    awk '{print $1}'
+}
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH

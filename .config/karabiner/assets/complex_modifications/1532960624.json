@@ -90,6 +90,51 @@
 	    ]
 	},
 	{
+	    "description": "Change Option (or Shift) + i/k to Home and End",
+	    "manipulators": [
+		{
+		    "type": "basic",
+		    "from": {
+			"key_code": "i",
+			"modifiers": {
+			    "mandatory": [
+				"left_option",
+				"left_command"
+			    ]
+			}
+		    },
+		    "to": [
+			{
+			    "key_code": "up_arrow",
+			    "modifiers": [
+				"command"
+			    ]
+			}
+		    ]
+		},
+		{
+		    "type": "basic",
+		    "from": {
+			"key_code": "k",
+			"modifiers": {
+			    "mandatory": [
+				"left_option",
+				"left_command"
+			    ]
+			}
+		    },
+		    "to": [
+			{
+			    "key_code": "down_arrow",
+			    "modifiers": [
+				"command"
+			    ]
+			}
+		    ]
+		} 
+	    ]
+	},
+	{
 	    "description": "Change Option (or Shift) + h/; to Home and End",
 	    "manipulators": [
 		{

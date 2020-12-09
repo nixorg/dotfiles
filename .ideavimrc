@@ -24,10 +24,10 @@ nmap go :action OverrideMethods<CR>
 
 " commands
 
-" command! O action HideActiveWindow
+command! O action HideAllWindows
 
 " window
-nnoremap <leader>0 :action HideActiveWindow<CR>
+nnoremap <leader>0 :action HideAllWindows<CR>
 
 " navigation
 nmap gs :action GotoSuperMethod<CR>
