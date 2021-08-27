@@ -145,3 +145,7 @@ function dot-synch() {
     git --git-dir=$HOME/dotfiles/ --work-tree=$HOME commit -m "$DATE synch"
     git --git-dir=$HOME/dotfiles/ --work-tree=$HOME push -u origin master
 }
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/nixorg/.sdkman"
+[[ -s "/Users/nixorg/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/nixorg/.sdkman/bin/sdkman-init.sh"
