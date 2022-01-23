@@ -42,7 +42,7 @@ brew install maven
 brew install the_silver_searcher
 brew install git
 brew install tree
-brew install pandoc
+# brew install pandoc
 brew install bat
 brew install fd
 brew install npm
@@ -51,49 +51,49 @@ brew install tmux
 brew install jq
 brew install httpie
 brew install graphviz
-brew install postgresql@11
-brew install vifm 
+# brew install postgresql@11
+# brew install vifm 
 
 # font
 brew tap homebrew/cask-fonts
-brew cask install font-fira-mono-nerd-font
+brew install font-fira-mono-nerd-font
 
 # core
-brew cask install iterm2
-brew cask install alfred
-brew cask install adoptopenjdk/openjdk/adoptopenjdk8
-brew cask install adoptopenjdk/openjdk/adoptopenjdk11
-brew cask install karabiner-elements
-brew cask install maccy
-brew cask install simplenote
-brew cask install typora
-brew cask install notion
-brew cask install fsnotes
-brew cask install google-chrome
-brew cask install marta
-brew cask install microsoft-office
-brew cask install microsoft-teams
+brew install iterm2
+brew install alfred
+brew install adoptopenjdk/openjdk/adoptopenjdk8
+brew install adoptopenjdk/openjdk/adoptopenjdk11
+brew install karabiner-elements
+brew install maccy
+# brew cask install simplenote
+# brew cask install typora
+brew install notion
+#brew cask install fsnotes
+brew install google-chrome
+brew install marta
+brew install microsoft-office
+brew install microsoft-teams
 
 # chat
-brew cask install skype
-brew cask install telegram
-brew cask install viber
+brew install skype
+brew install telegram
+brew install viber
 
 # dev
-brew cask install pgadmin4
-brew cask install postman
-brew cask install slack
-brew cask install vagrant
-brew cask install sublime-text
-brew cask install visual-studio-code
-brew cask install intellij-idea
-brew cask install emacs
-brew cask install docker
-brew cask install virtualbox
-brew cask install virtualbox-extension-pack
-brew cask install android-platform-tools
+#brew cask install pgadmin4
+brew install postman
+#brew cask install slack
+#brew cask install vagrant
+brew install sublime-text
+brew install visual-studio-code
+brew install intellij-idea
+#brew cask install emacs
+brew install docker
+#brew cask install virtualbox
+#brew cask install virtualbox-extension-pack
+#brew cask install android-platform-tools
 
-#brew cask install dropbox
+brew install dropbox
 #brew cask install ccleaner
 #brew cask install deluge
 

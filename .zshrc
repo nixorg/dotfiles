@@ -1,20 +1,17 @@
 # ZSH
 export ZSH="/Users/nixorg/.oh-my-zsh"
 ZSH_CUSTOM=$HOME/.zsh
+ZSH_THEME="spaceship"
 
 # Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
+#autoload -U promptinit; promptinit
+#prompt spaceship
 
 plugins=(
     git
-    forgit
-    gitfast
-    autojump
     fzf
     fasd
     autoenv
-    ant
     zsh-autopair
     zsh-autosuggestions
     globalias
@@ -85,10 +82,10 @@ alias -g M='| m .'
 
 alias j='fasd_cd -d'
 # alias e="emacsclient -c -n"
-alias e="open -a /Applications/Emacs.app"
+# alias e="open -a /Applications/Emacs.app"
 
 # git aliases for dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # vagrant alias
 alias vup='vagrant up'
@@ -141,11 +138,18 @@ export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
 
 function dot-synch() {
     DATE=$(date +"%d.%m.%Y %H:%M")
-    git --git-dir=$HOME/dotfiles/ --work-tree=$HOME add -u 
-    git --git-dir=$HOME/dotfiles/ --work-tree=$HOME commit -m "$DATE synch"
-    git --git-dir=$HOME/dotfiles/ --work-tree=$HOME push -u origin master
+    git --git-dir=$HOME/.cfg/ --work-tree=$HOME add -u 
+    git --git-dir=$HOME/.cfg/ --work-tree=$HOME commit -m "$DATE synch"
+    git --git-dir=$HOME/.cfg/ --work-tree=$HOME push -u origin master
 }
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/nixorg/.sdkman"
 [[ -s "/Users/nixorg/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/nixorg/.sdkman/bin/sdkman-init.sh"
+fpath=($fpath "/Users/nixorg/.zfunctions")
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+# export ANDROID_HOME="$HOME/Library/Android/Sdk"
+# export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH"
+
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
